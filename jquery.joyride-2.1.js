@@ -182,7 +182,7 @@
         opts.tip_class = opts.tip_class || '';
 
         $blank = $(settings.template.tip).addClass(opts.tip_class);
-        content = $.trim($(opts.li).html()) +
+        content = '<div class="content">' + $.trim($(opts.li).html()) + '</div>' +
           methods.button_text(opts.button_text) +
           settings.template.link +
           methods.timer_instance(opts.index);

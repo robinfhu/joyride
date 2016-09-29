@@ -144,7 +144,7 @@ body {
 .joyride-tip-guide h5 { font-size: 16px; }
 .joyride-tip-guide h6 { font-size: 14px; }
 .joyride-tip-guide p {
-  margin: 0 0 18px 0;
+  margin: 10px 0 18px 0;
   font-size: 14px;
   line-height: 18px;
 }
@@ -158,9 +158,14 @@ body {
   border-bottom: none;
 }
 
+.joyride-tip-guide li {
+  margin-bottom: 10px;
+}
+
 /* Button Style */
 .joyride-tip-guide .joyride-next-tip {
   display: inline-block;
+  margin-top: 10px;
   width: auto;
   padding: 6px 18px 4px;
   font-size: 13px;
