@@ -160,6 +160,7 @@ body {
 
 /* Button Style */
 .joyride-tip-guide .joyride-next-tip {
+  display: inline-block;
   width: auto;
   padding: 6px 18px 4px;
   font-size: 13px;
