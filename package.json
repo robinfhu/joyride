@@ -1,0 +1,15 @@
+{
+  "name": "jquery-joyride",
+  "version": "2.1.0",
+  "description": "Joyride is an easy to configure jQuery site tour wizard.",
+  "main": "jquery.joyride-2.1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.novus.local:2022/ui/jquery-joyride.git"
+  },
+  "author": "Zurb",
+  "license": "ISC"
+}
