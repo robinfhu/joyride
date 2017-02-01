@@ -294,7 +294,7 @@
                     methods.show_modal();
                 }
             }
-            settings.preStepCallback(settings.$li.index(), settings.$next_tip );
+
 
             // parse options
             opts_arr = (settings.$li.data('options') || ':').split(';');
@@ -363,6 +363,8 @@
 
               }
             }
+
+            settings.preStepCallback(settings.$li.index(), settings.$next_tip );
 
             settings.$current_tip = settings.$next_tip;
             // Focus next button for keyboard users.
