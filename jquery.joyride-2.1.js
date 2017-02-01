@@ -41,12 +41,12 @@
       'preStepCallback'      : $.noop,    // A method to call before each step
       'postStepCallback'     : $.noop,    // A method to call after each step
       'template' : { // HTML segments for tip layout
-        'link'    : '<a href="#close" class="joyride-close-tip">X</a>',
+        'link'    : '<a href="javascript:void(0);" class="joyride-close-tip">X</a>',
         'timer'   : '<div class="joyride-timer-indicator-wrap"><span class="joyride-timer-indicator"></span></div>',
         'tip'     : '<div class="joyride-tip-guide"><span class="joyride-nub"></span></div>',
         'wrapper' : '<div class="joyride-content-wrapper" role="dialog"></div>',
-        'button'  : '<a href="#" class="joyride-next-tip"></a>',
-        'prev_button': '<a href="#" class="small button joyride-prev-tip"></a>',
+        'button'  : '<a href="javascript:void(0);" class="joyride-next-tip"></a>',
+        'prev_button': '<a href="javascript:void(0);" class="small button joyride-prev-tip"></a>',
         'modal'   : '<div class="joyride-modal-bg"></div>',
         'expose'  : '<div class="joyride-expose-wrapper"></div>',
         'exposeCover': '<div class="joyride-expose-cover"></div>'
