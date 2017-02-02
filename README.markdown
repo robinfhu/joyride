@@ -7,51 +7,15 @@ Installation Guide:      http://www.zurb.com/playground/jquery-joyride-feature-t
 
 Joyride is MIT-licensed and absolutely free to use.
 
-Joyride 3.0 - In Progress (v3 branch)
+Features on Robin Hu's Fork
+=============
 
-New in 2.1 - June 26, 2013
-* New `scroll` option.
-* New `autoStart` option.
-* Set tab focus to modal.
-* Add ARIA support
-* Patch for `destroy` method to check for joyride initialization.
-* Add expose support; background darkens and target highlights.
-* Localstorage support as alternative to cookies.
-* Add option to set cookie path.
-* Better tooltip alignment.
-* Add top adjustment options on a per-tip basis.
-* Other minor bug fixes.
+* The addition of a "Previous" button (thanks to Nate Lowry for this code).
+* For the last tooltip in the tutorial, show the word "Done" in the next button.
+* Adding a new method, "started", which will return true if Joyride is in progress.
+* Moved the `preStepCallback` to after the tooltip has become visible, to allow for position adjustments.
+* Minor CSS changes.
 
-New in 2.0.3 - January 4, 2013
-* Better screen edge detection
-* Source documentation updates
-
-New in 2.0.2 - Novmeber 7, 2012
-* Fix for off-screen detection in auto tooltip positioning
-* Fix for older versions of jQuery back to 1.4.3
-* jQuery 1.4.2 is no longer supported as it has issues with window resize
-* Support lists in tooltip content
-* Fix for reinitialization of plugin.
-
-New in 2.0.1 - September 28, 2012
-* Skip missing tooltip targets
-
-New in 2.0 - September 28, 2012
-* remove counters in favor of jQuery's in-built .next() method
-* button text is now defined with a data-button attribute, data-text will be deprecated in 3.0
-* edge-aware tooltips that reposition based on proximity to edge of screen (thanks to Jason from Hugo4GL for help with this)
-* support for pause, resume, restart, and destroy; ex. https://gist.github.com/3430584
-* support for jQuery 1.8.2, and 1.4.2+
-* modal style tooltips (li elements without data-id or data-class)
-* move tooltip templating to settings
-* make cookie support an option
-* you can now specify a `startOffset` for the index of the tooltip you want the tour to start on
-* better support for right and left aligned tooltips
-* override nub position on a per tooltip bases
-* deprecate inline positioning of tooltips
-* support for class based targeting with `data-class`
-* both `postStepCallback` and `postRideCallback` now return a reference to the last tip index and jquery object
-* more functionality, same size compressed (~12kb)
 
 Documentation
 ==============
