@@ -63,7 +63,7 @@
         return this.each(function () {
 
           if ($.isEmptyObject(settings)) {
-            settings = $.extend(true, defaults, opts);
+            settings = $.extend(true, {}, defaults, opts);
 
             // non configurable settings
             settings.document = window.document;
@@ -373,6 +373,8 @@
 
             settings.preStepCallback(settings.$li.index(), settings.$next_tip );
 
+            methods.adjust_position(settings.$li, settings.$next_tip);
+
             settings.$current_tip = settings.$next_tip;
             // Focus next button for keyboard users.
             $('.joyride-next-tip', settings.$current_tip).focus();
@@ -514,6 +516,20 @@
         }
       },
 
+      //Adjust location of tooltip based on special data-adjustment attribute.
+      adjust_position: function (li, tip) {
+        var adjustment = li.attr('data-adjustment');
+        if (!adjustment) {
+          return;
+        }
+
+        var parts = adjustment.split(',');
+        var top = parseInt(parts[0]), left = parseInt(parts[1]);
+        tip.css({
+          top: tip.position().top + top,
+          left: tip.position().left + left
+        });
+      },
       pos_default : function (init) {
         var half_fold = Math.ceil(settings.$window.height() / 2),
             tip_position = settings.$next_tip.offset(),
