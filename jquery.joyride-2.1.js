@@ -483,6 +483,11 @@
         settings = {};
       },
 
+      started: function () {
+        //Returns true if Joyride has been started.
+        return !$.isEmptyObject(settings);
+      },
+
       restart : function () {
         if(!settings.autoStart)
         {
