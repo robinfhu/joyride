@@ -95,8 +95,13 @@
             if ( (!settings.cookieMonster || !$.cookie(settings.cookieName) ) &&
               (!settings.localStorage || !methods.support_localstorage() || !localStorage.getItem(settings.localStorageKey) ) ) {
 
+              var lastIndex = settings.$tip_content.length - 1;
               settings.$tip_content.each(function (index) {
-                methods.create({$li : $(this), index : index});
+                methods.create({
+                  $li : $(this),
+                  index : index,
+                  isFinal: index === lastIndex
+                });
               });
 
               // show first tip
@@ -198,9 +203,10 @@
 
         $blank = $(settings.template.tip).addClass(opts.tip_class);
 
+        var button_text = opts.isFinal ? 'Done' : opts.button_text;
         content = '<div class="content">' + $.trim($(opts.li).html()) + '</div>' +
           methods.prev_button_text(opts.prev_button_text, opts.index) +
-          methods.button_text(opts.button_text) +
+          methods.button_text(button_text) +
           settings.template.link +
           methods.timer_instance(opts.index);
 
@@ -265,7 +271,8 @@
             index : opts.index,
             button_text : buttonText,
             prev_button_text : prevButtonText,
-            li : opts.$li
+            li : opts.$li,
+            isFinal: opts.isFinal
           }));
 
         $(settings.tipContainer).append($tip_content);
