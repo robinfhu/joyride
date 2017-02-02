@@ -15,12 +15,15 @@ Features on Robin Hu's Fork
 * Adding a new method, "started", which will return true if Joyride is in progress.
 * Moved the `preStepCallback` to after the tooltip has become visible, to allow for position adjustments.
 * Minor CSS changes.
-* A new 'data-adjustment' attribute, which lets you modify the top/left position of the tooltip.
+* A new `data-adjustment` attribute, which lets you modify the top/left position of the tooltip.
+* A fix made so that the internal 'defaults' object is not overriden on every joyride initialization.
+
+Example of the `data-adjustment`. This will move the tooltip 30 pixels down and 20 pixels left.
+
 
     <li data-id="element-1" data-adjustment="30,-20"></li>
 
 
-* A fix made so that the internal 'defaults' object is not overriden on every joyride initialization.
 
 Documentation
 ==============
